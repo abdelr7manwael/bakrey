@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.clear-fix{
+    clear: both;
+}
+body {
+    background-color: #eee;
+}
+
+nav{
+    background-color: #fff;
+    padding-bottom: 5px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+}
+
+.container{
+    width: 70%;
+    /* background-color: black; */
+    margin: auto;
+}
+
+nav .container .img-div{
+    width: 20%;
+    display: inline-block;
+}
+
+nav .container .img-div img{
+    width: 70%;
+
+}
+nav .container .menu{
+    float: right;
+    margin-top: 20px ;
+}
+
+nav .container .menu ul{
+    list-style: none;
+
+}
+
+nav .container .menu ul li{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+nav .container .menu ul li a{
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+}
+
+nav .container .menu ul li a:hover{
+        color: black;
+}
+
+main{
+    height: 90vh;
+    /* background-image: url(../img/main.jpg); */
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main .container .home{
+
+    text-align: center;
+    color: white;
+}
+
+main .container .home .msg{
+    padding-top :90px;
+}
+
+main .container .home .msg h3{
+    font-size: 26px;
+    margin: 5px 0px;
+}
+
+main .container .home .msg h2{
+    font-size: 40px;
+}
+
+main .container .home .btns{
+    margin-top: 20px;
+}
+
+main .container .home .btns button{
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    /* background-color: #795548;; */
+    transition: all .3s;
+}
+
+main .container .home .btns button.learn {
+    background-color: #795548;
+    border: 1px solid #795548;
+
+}
+main .container .home .btns button.learn:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+main .container .home .btns button.cont {
+    background-color: transparent;
+    border: 1px solid white;
+
+}
+main .container .home .btns button.cont:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+
+main .container .home .ball{
+    margin-top:20px;
+    /* background-color: tomato; */
+} 
+
+main .container .home .ball a{
+    display: inline-block;
+    border: 2px solid white;
+    padding: 2px 6px;
+    border-radius: 24px;
+    text-decoration: none;
+    color: white;
+    font-size:36px ;
+}
+
+.second{
+    padding: 40px  0px;
+    background-color: #eee;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.second .container h2{
+    margin-bottom: 20px;
+}
+.second .container .boxes{
+    margin-top: 20px;
+    /* background-color: tomato; */
+
+}
+
+.second .container .boxes .item{
+    width: 33%;
+    float: left;
+    /* margin-right: 10px; */
+
+}
+
+.second .container .boxes .item img{
+    width: 90%;
+}
+
+.second .container .boxes .item p{
+    width: 90%;
+    margin: auto;
+}
+
+
+.map{
+    padding: 100px 0px;
+    background-color: beige;
+
+}
+.map .container .box{
+    width:50%;
+    float: left;
+    margin: auto;
+
+}
+
+.map .container .box iframe{
+    border: 2px solid teal;
+}
+

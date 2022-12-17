@@ -1,88 +1,140 @@
 *{
     margin: 0;
     padding: 0;
-}
-.clear-fix{
-    clear: both;
-}
-body {
-    background-color: #eee;
+    font-family: 'Alegreya', sans-serif;
+    scroll-behavior: smooth;
 }
 
-nav{
+header nav{
     background-color: #fff;
     padding-bottom: 5px;
     width: 100%;
+    height: 60px;
     position: fixed;
     top: 0px;
     left: 0px;
-
 }
 
-.container{
-    width: 70%;
-    /* background-color: black; */
-    margin: auto;
-}
 
-nav .container .img-div{
-    width: 20%;
+header nav .container .img-div{
+    margin-top: 10px;
+    width: 10%;
     display: inline-block;
 }
 
-nav .container .img-div img{
-    width: 70%;
+header nav .container .img-div img{
+    width: 100%;
 
 }
-nav .container .menu{
+header nav .container .menu{
     float: right;
     margin-top: 20px ;
 }
 
-nav .container .menu ul{
+header nav .container .menu ul{
     list-style: none;
 
 }
 
-nav .container .menu ul li{
+header nav .container .menu ul li{
     display: inline-block;
     margin: 0px 10px;
 }
 
-nav .container .menu ul li a{
+header nav .container .menu ul li a{
     text-decoration: none;
     color: grey;
     font-weight: bold;
 }
 
-nav .container .menu ul li a:hover{
+header nav .container .menu ul li a.active{
+    color: black;
+}
+
+header nav .container .menu ul li:hover a{
         color: black;
 }
 
+header nav .container .menu li.list-blog{
+    position: relative;
+}
+
+header nav .container .menu ul.sub-list-blog {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 10px;
+    /* bottom: 100px; */
+    padding: 5px 0px;
+    background-color: #403d38;
+    width: 150px;
+    transition: visibility .1s;
+}
+
+header nav .container .menu li.list-blog:hover ul.sub-list-blog{
+    visibility: visible;
+}
+
+header nav .container .menu ul.sub-list-blog li{
+
+    padding: 10px 0px;
+    list-style: none;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    margin: 0px 0px 5px 0px;
+    transition: backgroundcolor .3s;
+}
+
+header nav .container .menu ul.sub-list-blog li:hover{
+    background-color: #8e7754;
+}
+
+
+header nav .container .menu ul.sub-list-blog li a{
+    margin-left: 15px;
+    color: white;
+    font-weight: normal;
+}
+
+
 main{
     height: 90vh;
-    /* background-image: url(../img/main.jpg); */
-    background-color: teal;
+    background-image: url(../img/main.jpg);
+    /* background-color: teal; */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 main .container .home{
 
     text-align: center;
     color: white;
+    padding-top: 200px;
 }
 
 main .container .home .msg{
     padding-top :90px;
+    margin-bottom: 50px;
+
 }
 
-main .container .home .msg h3{
-    font-size: 26px;
+
+main .container .home .msg p{
+    font-size: 20px;
     margin: 5px 0px;
+    font-family: "Alegreya";
+    font-weight: normal;
+}
+main .container .home .msg p.welcome{
+        font-size: 40px;
 }
 
-main .container .home .msg h2{
-    font-size: 40px;
+main .container .home .msg h1{
+    font-size: 80px;
+    font-family: "Alegreya";
+    font-weight: normal;
+    margin-bottom: 18px;
 }
 
 main .container .home .btns{
@@ -90,97 +142,339 @@ main .container .home .btns{
 }
 
 main .container .home .btns button{
-    padding: 15px 20px;
+    padding: 15px 28px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    /* background-color: #795548;; */
-    transition: all .3s;
+    font-size: 16px;
+    transition: background-color .1s, border-color .1s;
 }
 
 main .container .home .btns button.learn {
-    background-color: #795548;
-    border: 1px solid #795548;
+    background-color: #8e7754;
+    border: 2px solid #8e7754;
+    margin-right: 5px;
 
 }
-main .container .home .btns button.learn:hover {
-    background-color: white;
-    border: 1px solid white;
-    color: black;
-}
+
 main .container .home .btns button.cont {
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
 
 }
+
+main .container .home .btns button.learn:hover,
 main .container .home .btns button.cont:hover {
     background-color: white;
-    border: 1px solid white;
+    border: 2px solid white;
     color: black;
 }
 
+
 main .container .home .ball{
-    margin-top:20px;
+    margin-top:70px;
     /* background-color: tomato; */
 } 
 
 main .container .home .ball a{
     display: inline-block;
     border: 2px solid white;
-    padding: 2px 6px;
+    /* padding: 2px 8px; */
+    width: 32px;
+    height: 50px;
+    line-height: 0;
     border-radius: 24px;
     text-decoration: none;
     color: white;
     font-size:36px ;
 }
 
-.second{
-    padding: 40px  0px;
-    background-color: #eee;
+.who{
+    background-color: #fff;
+    padding: 140px 0px 100px 0px;
     text-align: center;
-    margin-bottom: 100px;
+
 }
 
-.second .container h2{
-    margin-bottom: 20px;
+.who .container .img-div,
+.who .container .inf-div
+{
+    width: 45%;
+    float: left;
 }
-.second .container .boxes{
+.who .container .img-div{
+    margin-right: 80px;
+}
+.who .container .inf-div{
+    text-align: left;
+}
+
+.who .container .img-div img{
+    width:100%;
+}
+.who .container .inf-div h2{
+     font-size: 32px;
+    font-weight: normal;
+}
+.who .container .inf-div p{
+    color: #686868;
+}
+.who .container .inf-div h2,
+.who .container .inf-div p{
+    margin-bottom: 30px;
+
+}
+.who .container .inf-div .sentence{
+    margin: 5px 0px;
+
+}
+
+.who .container .inf-div .sentence p{
+    display: inline-block;
+
+}
+.who .container .inf-div .sentence .icon{
+    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 1px solid silver;
+}
+
+
+
+.location{
+    background-color: #f8f8f8;
+    padding: 140px 0px 140px 0px;
+    text-align: center;
+}
+
+.location .container .img-div,
+.location .container .inf-div
+{
+    width: 45%;
+    float: left;
+}
+.location .container .img-div{
+    margin-left: 80px;
+}
+.location .container .inf-div{
+    text-align: left;
+}
+
+.location .container .img-div img{
+    width:100%;
+}
+.location .container .inf-div h2{
+     font-size: 32px;
+    font-weight: normal;
+}
+.location .container .inf-div p{
+    color: #686868;
+}
+.location .container .inf-div h2,
+.location .container .inf-div p{
+    margin-bottom: 30px;
+
+}
+
+
+
+
+
+.baking{
+    padding: 140px  0px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.baking .container h2{
+    margin-bottom: 30px;
+}
+.baking .container .boxes{
     margin-top: 20px;
     /* background-color: tomato; */
 
 }
 
-.second .container .boxes .item{
+.baking .container .boxes .item{
     width: 33%;
     float: left;
     /* margin-right: 10px; */
 
 }
 
-.second .container .boxes .item img{
+.baking .container .boxes .item img{
     width: 90%;
 }
 
-.second .container .boxes .item p{
+.baking .container .boxes .item p{
     width: 90%;
     margin: auto;
 }
 
 
-.map{
-    padding: 100px 0px;
-    background-color: beige;
+.contact {
+    padding: 140px 0px;
+    background-color: #f8f8f8;
+    text-align: center;
 
 }
-.map .container .box{
+.contact  .container .inf-div,
+.contact  .container .img-div{
     width:50%;
     float: left;
+    /* margin: auto; */
+
+}
+.contact  .container .inf-div{
+    text-align: left;
+}
+.contact  .container .inf-div .title h2{
+    font-size: 32px;
+    font-weight: normal;
+
+}
+.contact .container .inf-div  p{
+    color: #686868;
+    font-size: 18px;
+}
+.contact  .container .inf-div .title h2,
+.contact  .container .inf-div .title p{
+    margin-bottom: 30px;
+}
+.contact  .container .inf-div .title p{
+    width:80%
+}
+
+.contact  .container .inf-div .address p{
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+
+footer{
+    background-color: #403d38;
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+    color: #969696;
+}
+
+footer h3{
+    color: white;
+    font-weight: normal;
+}
+
+footer .container .top {
+    padding-bottom: 20px;
+}
+
+footer .container .top div{
+    text-align: left ;
+    width:22%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+footer .container .top div p{
+    width: 90%;
+    margin: 20px 0px;
+}
+
+footer .bottom {
+    background-color: #353330;
+    padding: 40px 0px 40px 0px;
+}
+
+footer .bottom .img-div{
     margin: auto;
+}
+
+footer .bottom .inf-div p{
+    margin: 30px 0px 40px 0px;
+}
+
+
+.back-to-top{
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    right: 15px;
+    bottom: 15px; 
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.back-to-top:hover{
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    border-color: #fff;
 
 }
 
-.map .container .box iframe{
-    border: 2px solid teal;
+
+/* custom */
+.clear-fix{
+    clear: both;
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+body{
+    background-color: black;
+}
+.active{
+    color: black;
 }
 
+.icon{
+    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 1px solid silver;
+    transition: background-colo .1s ,border-color .1s;
+}
+
+
+.gold{
+    background-color:#8e7754;
+    border-color: #8e7754;
+}
+
+.silver{
+    background-color: #484540;
+    border-color:transparent ;
+    cursor: pointer;
+}
+
+.facebook:hover{
+    
+    background-color: #0A66C2;
+
+}
+
+.twitter:hover{
+    background-color: #1DA1F2;
+
+}
+
+.google:hover{
+    
+      background-color: #CD201F;
+
+}
+
+.linked:hover{
+    
+    background-color: #0A66C2;
+
+}
+
+.mr-20{
+    margin-right: 20px;
+}

@@ -6,6 +6,7 @@
 }
 
 header nav{
+    /* overflow: auto; */
     background-color: #fff;
     padding-bottom: 5px;
     width: 100%;
@@ -188,12 +189,38 @@ main .container .home .ball a{
     color: white;
     font-size:36px ;
 }
+main .container .home .ball a .up-to-down{
+    position: relative;
+    animation:  move-scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 
+@keyframes move-scroll {
+    0% {
+        opacity: 1;
+        top: 0;
+        
+    }
+    50% {
+        opacity: 0.5;
+        top: 50%
+    }
+    100%{
+        top: 80%;
+        opacity: 0;
+    }
+    
+}
 .who{
+    /* overflow: auto; */
     background-color: #fff;
     padding: 140px 0px 100px 0px;
     text-align: center;
 
+}
+.who .container {
+    overflow: auto;
 }
 
 .who .container .img-div,
